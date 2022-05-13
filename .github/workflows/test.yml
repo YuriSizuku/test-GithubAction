@@ -9,5 +9,6 @@ jobs:
         pytoolname: [bintext, ftextcvt]
     steps:
     - name: echo current building object
-      run: echo {{ matrix.pytoolname }}
+      run: |
+        echo ${{ matrix.pytoolname }}
     
