@@ -1,0 +1,13 @@
+name: build_tools
+on:
+  push: {} 
+jobs:
+  test_matrix:
+    runs-on: windows-2019 # default batch, powershell
+    strategy:
+      matrix:
+        pytoolname: [bintext, ftextcvt]
+    steps:
+    - name: echo current building object
+      run: echo {{ matrix.pytoolname }}
+    
